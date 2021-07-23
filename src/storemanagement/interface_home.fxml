@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="757.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Interface_homeController">
+    <stylesheets>
+        <URL value="@/style/interface_home.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="127.0" prefWidth="757.0" style="-fx-background-color: #e1e5ea;">
+         <children>
+            <Text fill="#4a4a4a" layoutX="278.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STORE MANAGEMENT">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtSearch" layoutX="568.0" layoutY="82.0" prefHeight="34.0" prefWidth="175.0" promptText="Search" style="-fx-background-color: #fefefe;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="127.0" prefHeight="482.0" prefWidth="214.0" style="-fx-background-color: #d8e3e7;">
+         <children>
+            <Button fx:id="btnSimpan" layoutX="115.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#btnSimpan_Click" style="-fx-background-color: #289672;" text="Simpan" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRest" layoutX="28.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#btnReset_Click" style="-fx-background-color: #fefefe;" text="Reset" textFill="#4e4e4e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="28.0" layoutY="131.0" text="Id" />
+      <TextField fx:id="txtuser_Id" layoutX="28.0" layoutY="159.0" style="-fx-background-color: #fefefe;" />
+      <Label layoutX="28.0" layoutY="201.0" text="Nama Barang" />
+      <TextField fx:id="txtNama_barang" layoutX="28.0" layoutY="227.0" style="-fx-background-color: #fefefe;" />
+      <Label layoutX="28.0" layoutY="270.0" text="Harga" />
+      <TextField fx:id="txtHarga" layoutX="28.0" layoutY="296.0" style="-fx-background-color: #fefefe;" />
+      <Label layoutX="30.0" layoutY="339.0" text="Kategori" />
+      <ComboBox fx:id="comboKategori" layoutX="28.0" layoutY="368.0" prefWidth="150.0" promptText="Select" style="-fx-background-color: #fefefe;" />
+      <Label layoutX="30.0" layoutY="409.0" text="Berat" />
+      <TextField fx:id="txtBerat" layoutX="28.0" layoutY="437.0" style="-fx-background-color: #fefefe;" />
+      <Label layoutX="29.0" layoutY="478.0" text="Status" />
+      <ComboBox fx:id="comboStatus" layoutX="28.0" layoutY="505.0" prefWidth="150.0" promptText="Select" style="-fx-background-color: #fefefe;" />
+      <TableView fx:id="table_Store" layoutX="213.0" layoutY="127.0" onMouseClicked="#getSelected" prefHeight="404.0" prefWidth="544.0" style="-fx-background-color: #dddd;">
+        <columns>
+          <TableColumn fx:id="col_Id" prefWidth="50.0" text="Id" />
+          <TableColumn fx:id="col_Namabarang" prefWidth="120.0" text="Nama Barang" />
+            <TableColumn fx:id="col_Harga" prefWidth="74.0" text="Harga" />
+            <TableColumn fx:id="col_Kategori" prefWidth="112.0" text="Kategori" />
+            <TableColumn fx:id="col_Berat" prefWidth="99.0" text="Berat" />
+            <TableColumn fx:id="col_Status" prefWidth="94.0" text="Status" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="213.0" layoutY="531.0" prefHeight="78.0" prefWidth="544.0" style="-fx-background-color: #d8e3e7;">
+         <children>
+            <Button fx:id="btnUpdate" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#btnUpdate_Click" style="-fx-background-color: #29bb89;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="96.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#btnDelete_Click" style="-fx-background-color: #e84545;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
